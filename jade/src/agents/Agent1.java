@@ -1,46 +1,46 @@
 package agents;
 
-import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.io.RandomAccessFile;
 import java.util.HashMap;
-import java.util.Scanner;
-
 import jade.core.Agent;
-import jade.core.behaviours.CyclicBehaviour;
-import jade.core.behaviours.SimpleBehaviour;
+import jade.core.behaviours.OneShotBehaviour;;
 
 public class Agent1 extends Agent {
+
 	private static final long serialVersionUID = 1L;
-	protected SimpleBehaviour simpleBehaviour;
-	private HashMap <String,String> mensajes = new HashMap <String,String>();
+	private Object[] parameters;
+	private HashMap<String,String> messages = new HashMap<String,String>();
+	
+	class DataProccessing extends OneShotBehaviour{
 
-	public void setup(){
-		simpleBehaviour = new SimpleBehaviour(this){
-			private static final long serialVersionUID = 1L;
-			public void action(){
-				FileReader file;
-				BufferedReader br = null;
-				try {
-					file = new FileReader("./messages.txt");
-					br = new BufferedReader (file);
-					String line;
+		private static final long serialVersionUID = 1L;
 
-					while ((line = br.readLine()) != null){
-						String [] parts = line.split(":",2);
-						mensajes.put(parts[0], parts[1]);
-					}
-				} catch (Exception e) {
-					e.printStackTrace();
+		public void action() {
+			try {
+				RandomAccessFile file = new RandomAccessFile((String)parameters[0], "r");
+				String line;
+				while((line = file.readLine()) != null){
+					String division [] = line.split(":", 2);
+					messages.put(division[0], division[1]);
 				}
+				file.close();
+			} catch (FileNotFoundException e) {
+				System.out.println("No existe el fichero");
+			} catch (IOException e) {
+				System.out.println("No se ha podido leer el fichero");
 			}
-			@Override
-			public boolean done() {
-				return true;
-			}
-
-		};
-		addBehaviour(simpleBehaviour);
+		}
+	}
+	
+	public void setup(){
+		parameters = getArguments();
+		if(parameters == null){
+			System.out.println("Introduce el argumento");
+		}else{
+			DataProccessing dp = new DataProccessing();
+			addBehaviour(dp);
+		}
 	}
 }
