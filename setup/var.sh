@@ -1,2 +1,2 @@
 # RUTA ABSOLUTA
-export GOOGLE_APPLICATION_CREDENTIALS=".../sistemas-inteligentes/sentimental-analysis/secret.json"
+export GOOGLE_APPLICATION_CREDENTIALS=".../sistemas-inteligentes/setup/secret.json"
