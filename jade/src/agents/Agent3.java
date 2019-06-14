@@ -11,6 +11,7 @@ import jade.lang.acl.MessageTemplate;
 import jade.lang.acl.UnreadableException;
 
 public class Agent3 extends Agent {
+	private static final long serialVersionUID = 1L;
 	private Object obj;
 	public class ReceiveMessageBehaviour extends OneShotBehaviour { 
 		private static final long serialVersionUID = 1L;
