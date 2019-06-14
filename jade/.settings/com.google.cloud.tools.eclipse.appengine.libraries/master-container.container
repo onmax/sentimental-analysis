@@ -1,0 +1,101 @@
+{
+  "description": "Google Cloud Platform Libraries",
+  "path": "com.google.cloud.tools.eclipse.appengine.libraries/master-container",
+  "entries": [
+    {
+      "accessRules": [],
+      "sourceAttachmentPath": "BIN/com/google/cloud/google-cloud-language/1.78.0/google-cloud-language-1.78.0-sources.jar",
+      "path": "com/google/cloud/google-cloud-language/1.78.0/google-cloud-language-1.78.0.jar",
+      "attributes": [
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.repository",
+          "value": "central"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.groupid",
+          "value": "com.google.cloud"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.artifactId",
+          "value": "google-cloud-language"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.type",
+          "value": "jar"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.version",
+          "value": "1.78.0"
+        },
+        {
+          "name": "org.eclipse.jst.component.dependency",
+          "value": "/WEB-INF/lib"
+        }
+      ]
+    },
+    {
+      "accessRules": [],
+      "sourceAttachmentPath": "BIN/com/googlecode/objectify/objectify/6.0.4/objectify-6.0.4-sources.jar",
+      "path": "com/googlecode/objectify/objectify/6.0.4/objectify-6.0.4.jar",
+      "attributes": [
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.repository",
+          "value": "central"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.groupid",
+          "value": "com.googlecode.objectify"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.artifactId",
+          "value": "objectify"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.type",
+          "value": "jar"
+        },
+        {
+          "name": "com.google.cloud.tools.eclipse.appengine.libraries.version",
+          "value": "6.0.4"
+        },
+        {
+          "name": "org.eclipse.jst.component.dependency",
+          "value": "/WEB-INF/lib"
+        },
+        {
+          "name": "javadoc_location",
+          "value": "https://www.javadoc.io/doc/com.googlecode.objectify/objectify/6.0"
+        }
+      ]
+    }
+  ],
+  "libraryFiles": [
+    {
+      "filters": [],
+      "mavenCoordinates": {
+        "repository": "central",
+        "groupId": "com.google.cloud",
+        "artifactId": "google-cloud-language",
+        "version": "1.78.0",
+        "type": "jar"
+      },
+      "export": true,
+      "fixedVersion": true,
+      "pinned": false
+    },
+    {
+      "filters": [],
+      "mavenCoordinates": {
+        "repository": "central",
+        "groupId": "com.googlecode.objectify",
+        "artifactId": "objectify",
+        "version": "6.0.4",
+        "type": "jar"
+      },
+      "javadocUri": "https://www.javadoc.io/doc/com.googlecode.objectify/objectify/6.0",
+      "export": true,
+      "fixedVersion": true,
+      "pinned": false
+    }
+  ]
+}
