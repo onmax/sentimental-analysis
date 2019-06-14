@@ -1,24 +1,22 @@
-google.charts.load("current", { packages: ["treemap"] });
+google.charts.load("current", {
+	packages: ["treemap"]
+});
 google.charts.setOnLoadCallback(drawLanguagesChart);
+
 function drawLanguagesChart() {
 	var data = google.visualization.arrayToDataTable([
-		["User", "Parent"],
-		["Alex", "english"],
-		["Raul", "french"],
-		["Gema", "spanish"],
-		["Max", "spanish"]
+		["Language", "Number of people"],
+		["English", 1],
+		["Spanish", 2],
+		["French", 1],
 	]);
 
-	tree = new google.visualization.TreeMap(
-		document.getElementById("languagesChart")
-	);
+	var view = new google.visualization.DataView(data);
+	view.setColumns([0, 1]);
 
-	tree.draw(data, {
-		minColor: "#f00",
-		midColor: "#ddd",
-		maxColor: "#0d0",
-		headerHeight: 0,
-		fontColor: "black",
-		showScale: false
-	});
+	var options = {
+		title: "Languages spoken",
+	};
+	var chart = new google.visualization.ColumnChart(document.getElementById("languagesChart"));
+	chart.draw(view, options);
 }
