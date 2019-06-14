@@ -12,22 +12,26 @@ import jade.lang.acl.UnreadableException;
 
 public class Agent3 extends Agent {
 	private static final long serialVersionUID = 1L;
-	private Object obj;
-	public class ReceiveMessageBehaviour extends OneShotBehaviour { 
+
+	public class Interfaz extends OneShotBehaviour { 
 		private static final long serialVersionUID = 1L;
 		private final MessageTemplate mt = MessageTemplate.or(MessageTemplate.MatchPerformative(ACLMessage.REQUEST),
 				MessageTemplate.MatchPerformative(ACLMessage.FAILURE));
-		public ReceiveMessageBehaviour(Agent agent) {
-			super(agent);
-		}
+
 		public void action() {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
 			try {
-				obj = message.getContentObject();
-				System.out.println(this.myAgent.getName() + ": Ha llegado el mensaje");
+				//Comprobar el tipo de mensaje failure o request: No se como hacerlo
+
+				Object obj = message.getContentObject();
+				System.out.println("Agente3: Ha llegado el mensaje");
+				System.out.println("Mensaje: " + obj);
+				
+				//INSERTAR CODIGO AGENTE 3: No se donde está =)
+				
 			} catch (UnreadableException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
+				//Enviar error a la api
 			}
 
 		}
@@ -39,15 +43,19 @@ public class Agent3 extends Agent {
 		ServiceDescription sd = new ServiceDescription();
 		//Cambiar nombre
 		sd.setName("Interfaz");
+		//No se para que ponemos type
 		sd.setType("Interfaz");
 		dfd.addServices(sd);
+		sd.setName("Error");
+		sd.setType("Error");
 		try {
 			DFService.register( this, dfd);
 			System.out.println("Agent3: Servicio publicado");
 		} catch (FIPAException e) {
+			//Enviar error a la api
 			e.printStackTrace();
 		}
-		addBehaviour(new ReceiveMessageBehaviour(this));
+		addBehaviour(new Interfaz());
 
 	}
 }

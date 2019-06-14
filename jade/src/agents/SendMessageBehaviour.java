@@ -26,9 +26,13 @@ public class SendMessageBehaviour extends OneShotBehaviour {
 		else {
 			msg = new ACLMessage(ACLMessage.FAILURE);
 		}
-		msg.addReceiver(receiver);
+		AID res = new AID();
+		res.setName(receiver.getName());
+		res.addAddresses((String)receiver.getAllAddresses().next());
+		msg.addReceiver(res);
 		try {
 			msg.setContentObject((Serializable)obj);
+			System.out.println("Mensaje enviado: " + obj);
 			this.myAgent.send(msg);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block

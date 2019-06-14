@@ -19,9 +19,9 @@ public class Agent1 extends Agent {
 	private static final long serialVersionUID = 1L;
 	private Object[] parameters;
 	private HashMap<String,String> messages = new HashMap<String,String>();
-	private AID addressAgent2;
-	class DataProccessing extends OneShotBehaviour{
 
+	class DataProccessing extends OneShotBehaviour{
+		
 		private static final long serialVersionUID = 1L;
 		public void action() {
 			try {
@@ -32,53 +32,71 @@ public class Agent1 extends Agent {
 					messages.put(division[0], division[1]);
 				}
 				file.close();
-				
-			} catch (FileNotFoundException e) {
+				AID receiver = getAddress("EnviarMensajes");
+				ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
+				request.addReceiver(receiver);
+				request.setContent("Cambiar este texto por el objeto a enviar");
+				this.myAgent.send(request);
+				System.out.println("Agente1: Mensaje enviado");
+
+			} //Enviar failure: Hay que limpiarlo
+			catch (FileNotFoundException e) {
 				System.out.println("No existe el fichero");
+				AID receiver = getAddress("Error");
+				ACLMessage request = new ACLMessage(ACLMessage.FAILURE);
+				request.addReceiver(receiver);
+				request.setContent("Cambiar este texto por el objeto a enviar");
+				this.myAgent.send(request);
+				System.out.println("Agente1: Mensaje enviado");
+				
 			} catch (IOException e) {
 				System.out.println("No se ha podido leer el fichero");
+				System.out.println("No existe el fichero");
+				AID receiver = getAddress("Error");
+				ACLMessage request = new ACLMessage(ACLMessage.FAILURE);
+				request.addReceiver(receiver);
+				request.setContent("Cambiar este texto por el objeto a enviar");
+				this.myAgent.send(request);
+				System.out.println("Agente1: Mensaje enviado");
 			}
 		}
 	}
-	class getAddress extends OneShotBehaviour{
-		private static final long serialVersionUID = 1L;
-		public void action() {
-			DFAgentDescription template=new DFAgentDescription();
-			ServiceDescription templateSd=new ServiceDescription();
-			templateSd.setName("EnviarMensajes");
-			templateSd.setType("Mensajes");
-			template.addServices(templateSd);
-			//			SearchConstraints sc = new SearchConstraints();
-			//			sc.setMaxResults(new Long(1));
-			try {
-				boolean encontrado = false;
-				while(!encontrado) {
-					DFAgentDescription [] results = DFService.search(this.myAgent, template);
-					if(results.length > 0) {
-						System.out.println("Agent1: Encontr� el servicio");
-						DFAgentDescription dfd = results[0];
-						System.out.println("Nombre del agente: " + dfd.getName().getName());
-						addressAgent2 = dfd.getName();
-						encontrado = true;
-					}
+	public AID getAddress (String service){
+		AID res = new AID();
+		DFAgentDescription template=new DFAgentDescription();
+		ServiceDescription templateSd=new ServiceDescription();
+		templateSd.setName(service);
+//		templateSd.setName("EnviarMensajes");
+//		templateSd.setType("Mensajes");
+		template.addServices(templateSd);
+		try {
+			boolean encontrado = false;
+			System.out.println("Agent1: Buscar servicio");
+			while(!encontrado) {
+				DFAgentDescription [] results = DFService.search(this, template);
+				if(results.length > 0) {
+					System.out.println("Agent1: Encontrado el servicio");
+					DFAgentDescription dfd = results[0];
+					System.out.println("Nombre del agente: " + dfd.getName().getName());
+					System.out.println("Direccion: " + dfd.getName().getAddressesArray()[0]);
+					encontrado = true;
+					res = dfd.getName();
 				}
-			}catch (FIPAException e) {
-				e.printStackTrace();
 			}
 		}
+		catch (FIPAException e) {
+			e.printStackTrace();
+		}
+		return res;
 	}
 
 	public void setup(){
-		addBehaviour(new getAddress());
 		parameters = getArguments();
 		if(parameters == null){
 			System.out.println("Introduce el argumento");
 		}else{
-			
 			DataProccessing dp = new DataProccessing();
 			addBehaviour(dp);
 		}
-		addBehaviour(new SendMessageBehaviour(this, messages, "REQUEST", addressAgent2));
-		
 	}
 }
