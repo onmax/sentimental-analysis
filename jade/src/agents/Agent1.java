@@ -31,13 +31,8 @@ public class Agent1 extends Agent {
 					String division [] = line.split(":", 2);
 					messages.put(division[0], division[1]);
 				}
-				ACLMessage msg = new ACLMessage(ACLMessage.REQUEST);
-				AID r = new AID();
-				r.setName("AgenteReceiver@10.151.209.127:1099/JADE");
-				r.addAddresses("http://10.151.209.127:7778/acc");
-				msg.addReceiver(r);
-
 				file.close();
+				
 			} catch (FileNotFoundException e) {
 				System.out.println("No existe el fichero");
 			} catch (IOException e) {
@@ -60,7 +55,7 @@ public class Agent1 extends Agent {
 				while(!encontrado) {
 					DFAgentDescription [] results = DFService.search(this.myAgent, template);
 					if(results.length > 0) {
-						System.out.println("Agent1: Encontró el servicio");
+						System.out.println("Agent1: Encontrï¿½ el servicio");
 						DFAgentDescription dfd = results[0];
 						System.out.println("Nombre del agente: " + dfd.getName().getName());
 						addressAgent2 = dfd.getName();
@@ -79,6 +74,7 @@ public class Agent1 extends Agent {
 		if(parameters == null){
 			System.out.println("Introduce el argumento");
 		}else{
+			
 			DataProccessing dp = new DataProccessing();
 			addBehaviour(dp);
 		}

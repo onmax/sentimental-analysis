@@ -1,8 +1,10 @@
 package agents;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
@@ -14,27 +16,31 @@ import jade.lang.acl.MessageTemplate;
 import jade.lang.acl.UnreadableException;
 
 public class Agent2 extends Agent {
-	public class ResponderBehaviour extends OneShotBehaviour
-	{
-		private final MessageTemplate mt1 =
-				MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
-		//						,MessageTemplate.MatchPerformative(ACLMessage.INFORM));
-		public ResponderBehaviour(Agent agent)
-		{
-			super(agent);
-		}
-		public void action()
-		{
-			ACLMessage aclMessage = myAgent.blockingReceive(mt1);
-			System.out.println("Receiver: Mensaje recibido");
-			System.out.println("Receiver: " + aclMessage.getConversationId());
+	private ArrayList<String> userData;
+	private AID addressAgent3;
+	class getAddress extends OneShotBehaviour{
+		private static final long serialVersionUID = 1L;
+		public void action() {
+			DFAgentDescription template=new DFAgentDescription();
+			ServiceDescription templateSd=new ServiceDescription();
+			templateSd.setName("Interfaz");
+			templateSd.setType("Interfaz");
+			template.addServices(templateSd);
+			//			SearchConstraints sc = new SearchConstraints();
+			//			sc.setMaxResults(new Long(1));
 			try {
-				HashMap<String, String> res = (HashMap<String,String>)aclMessage.getContentObject();
-				for(Map.Entry<String, String> value: res.entrySet()) {
-					System.out.println("Clave: " + value.getKey() + " Valor: " + value.getValue());
+				boolean encontrado = false;
+				while(!encontrado) {
+					DFAgentDescription [] results = DFService.search(this.myAgent, template);
+					if(results.length > 0) {
+						System.out.println("Agent2: Encontrado el servicio");
+						DFAgentDescription dfd = results[0];
+						System.out.println("Nombre del agente: " + dfd.getName().getName());
+						addressAgent3 = dfd.getName();
+						encontrado = true;
+					}
 				}
-			} catch (UnreadableException e) {
-				// TODO Auto-generated catch block
+			}catch (FIPAException e) {
 				e.printStackTrace();
 			}
 		}
@@ -53,7 +59,10 @@ public class Agent2 extends Agent {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-//		addBehaviour(new defineService(this));
+		ReceiveMessageBehaviour rcv = new ReceiveMessageBehaviour(this);
+		addBehaviour(rcv);
+		addBehaviour(new getAddress());
+		addBehaviour(new SendMessageBehaviour(this, rcv.getMessage(), "REQUEST", addressAgent3));
 	}
 
 }
