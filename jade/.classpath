@@ -9,6 +9,6 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="lib/commons-codec-1.3.jar"/>
 	<classpathentry kind="lib" path="lib/jade.jar"/>
-	<classpathentry kind="lib" path="C:/Users/rcarb/SI/sistemas-inteligentes/jade/lib/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/max/Documents/sistemas-inteligentes/jade/lib/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
