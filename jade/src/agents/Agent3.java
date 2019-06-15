@@ -33,7 +33,7 @@ public class Agent3 extends Agent {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
 			try {
 				Object obj = message.getContentObject();
-				RandomAccessFile file = new RandomAccessFile("res.txt", "rw");
+				RandomAccessFile file = new RandomAccessFile("res.json", "rw");
 				if(message.getPerformative() == ACLMessage.REQUEST) {
 					JSONArray result = list2JSON((ArrayList<Person>)obj);
 					file.writeUTF(result.toString());
