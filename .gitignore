@@ -29,3 +29,6 @@ secret.json
 
 APDescription.txt
 MTPs-Main-Container.txt
+
+jade/*.json
+jade/*.txt

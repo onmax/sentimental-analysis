@@ -29,6 +29,7 @@ function drawPeopleSentiments() {
 			matrix[j + 1][i * 2 + 2] = `<div class="tooltip"><b>Score: </b> ${s.score} <br><b>Magnitude:</b> ${s.magnitude} <br><b>Content:</b> ${s.content}</div>`
 		})
 	})
+	console.log(matrix)
 
 	const data = google.visualization.arrayToDataTable(matrix);
 

@@ -33,7 +33,7 @@ public class Agent3 extends Agent {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
 			try {
 				Object obj = message.getContentObject();
-				RandomAccessFile file = new RandomAccessFile("res.json", "rw");
+				RandomAccessFile file = new RandomAccessFile("output.json", "rw");
 				if(message.getPerformative() == ACLMessage.REQUEST) {
 					JSONArray result = list2JSON((ArrayList<Person>)obj);
 					file.writeUTF(result.toString());
@@ -60,9 +60,9 @@ public class Agent3 extends Agent {
 			while(it1.hasNext()) {
 				person = it1.next();
 				JSONArray sentencesJSON = new JSONArray();
-				sentences = new HashMap<>();
 				Iterator<Sentence> it2 = person.getSentences().iterator();
 				while(it2.hasNext()) {
+					sentences = new HashMap<>();
 					sentence = it2.next();				
 					sentences.put("content", sentence.getText().getContent());
 					sentences.put("score", sentence.getSentiment().getScore());
