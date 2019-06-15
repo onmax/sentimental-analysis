@@ -1,3 +1,7 @@
+:root {
+    --mdc-theme-primary: #0847d5;
+}
+
 html,
 body {
     padding: 0;

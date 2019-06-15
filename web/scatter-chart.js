@@ -17,7 +17,6 @@ function drawChart() {
     });
     peopleData.map(p => {
         data.addRows(p.sentences.map(s => {
-            console.log([s.score, s.magnitude, s.content, `point { fill-color: ${p.color}; }`], p.name)
             return [s.score, s.magnitude, s.content, `point { fill-color: ${p.color}; }`]
         }))
     })
@@ -26,6 +25,8 @@ function drawChart() {
         title: 'Scores and magnitudes',
         hAxis: {
             title: 'Score',
+            maxValue: 1,
+            minValue: -1
         },
         vAxis: {
             title: 'Magnitude',
