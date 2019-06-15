@@ -3,6 +3,7 @@ package agents;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.io.Serializable;
 import java.util.HashMap;
 import jade.core.AID;
 import jade.core.Agent;
@@ -33,33 +34,33 @@ public class Agent1 extends Agent {
 				}
 				file.close();
 				AID receiver = getAddress("EnviarMensajes");
-				ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
-				request.addReceiver(receiver);
-				request.setContent("Cambiar este texto por el objeto a enviar");
-				this.myAgent.send(request);
-				System.out.println("Agente1: Mensaje enviado");
-
+				send(receiver, "REQUEST", messages);
 			} //Enviar failure: Hay que limpiarlo
 			catch (FileNotFoundException e) {
-				System.out.println("No existe el fichero");
+				System.out.println("Agente1: No existe el fichero");
 				AID receiver = getAddress("Error");
-				ACLMessage request = new ACLMessage(ACLMessage.FAILURE);
-				request.addReceiver(receiver);
-				request.setContent("Cambiar este texto por el objeto a enviar");
-				this.myAgent.send(request);
-				System.out.println("Agente1: Mensaje enviado");
-				
+				//En el failure podemos enviar un texto explicando el error
+				send(receiver, "FAILURE",null);
 			} catch (IOException e) {
-				System.out.println("No se ha podido leer el fichero");
-				System.out.println("No existe el fichero");
+				System.out.println("Agente1: No se ha podido leer el fichero");
 				AID receiver = getAddress("Error");
-				ACLMessage request = new ACLMessage(ACLMessage.FAILURE);
-				request.addReceiver(receiver);
-				request.setContent("Cambiar este texto por el objeto a enviar");
-				this.myAgent.send(request);
-				System.out.println("Agente1: Mensaje enviado");
+				send(receiver, "FAILURE", null);
 			}
 		}
+	}
+	public void send(AID receiver, String tipo, Object content) {
+		ACLMessage request = (tipo.equals("REQUEST")) ? new ACLMessage(ACLMessage.REQUEST): new ACLMessage(ACLMessage.FAILURE);
+		request.addReceiver(receiver);
+//		request.setContent("Cambiar este texto por el objeto a enviar");
+		if(content != null) {
+			try {
+				request.setContentObject((Serializable)content);
+			} catch (IOException e) {
+				
+			}
+		}
+		this.send(request);
+		System.out.println("Agente1: Mensaje enviado");
 	}
 	public AID getAddress (String service){
 		AID res = new AID();

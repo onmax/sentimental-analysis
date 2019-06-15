@@ -1,5 +1,13 @@
 package agents;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.List;
+
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
@@ -22,19 +30,57 @@ public class Agent3 extends Agent {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
 			try {
 				//Comprobar el tipo de mensaje failure o request: No se como hacerlo
-
 				Object obj = message.getContentObject();
 				System.out.println("Agente3: Ha llegado el mensaje");
-				System.out.println("Mensaje: " + obj);
+//				System.out.println("Mensaje: " + obj);
 				
 				//INSERTAR CODIGO AGENTE 3: No se donde está =)
-				
+				JSONArray result = transformacion((ArrayList<Person>)obj);
 			} catch (UnreadableException e) {
 				e.printStackTrace();
 				//Enviar error a la api
 			}
 
 		}
+		public  JSONArray transformacion(List<Person>person){
+
+			Iterator<Person> it = person.iterator();
+			Person persona = null; 
+			Sentence mensajes = null;
+			JSONArray json = new JSONArray();
+			JSONObject jsonObj = new JSONObject();
+			JSONObject jsonMsg = new JSONObject();
+			HashMap<String, Object> elem = new HashMap<>(); 
+			HashMap<String,Object> mensaj = new HashMap<>();
+			
+			while(it.hasNext()) {
+				persona = it.next();
+				JSONArray jsonMsgs = new JSONArray();
+				elem.put("name", persona.getName());
+				elem.put("lang", persona.getLang());
+				elem.put("score", persona.getScore());
+				elem.put("magnitude", persona.getMagnitude());
+				
+				
+				
+				Iterator<Sentence> it2 = persona.getSentences().iterator();
+				while(it2.hasNext()) {
+					mensajes = it2.next();				
+					mensaj.put("content", mensajes.getText().getContent());
+					mensaj.put("score", mensajes.getSentiment().getScore());
+					mensaj.put("magnitude", mensajes.getSentiment().getMagnitude());
+					jsonMsgs.add(mensaj);
+			
+				}
+				elem.put("sentences", jsonMsgs);
+				json.add(elem);
+
+			}
+			System.out.println(json);
+			return json;
+
+		}
+
 	}
 
 	public void setup() {

@@ -47,42 +47,28 @@ public class Agent2 extends Agent {
 				//INSERTAR CÓDIGO DE FUNCIONES AGENTE 2
 				
 				// Example HashMap
-				HashMap<String, String> messages = new HashMap<String, String>();
-				String str = "Esto es un mensaje sin sentimiento. Odio tener que ir a misa. Te amo. Que bonito día. Quiero mucho a mi mama";
-				messages.put("Alex", str);
+				HashMap<String, String> messages = (HashMap<String,String>)obj;
+//				String str = "Esto es un mensaje sin sentimiento. Odio tener que ir a misa. Te amo. Que bonito día. Quiero mucho a mi mama";
+//				messages.put("Alex", str);
 
 				//		transformacion(messages);
 
-				//		getData(messages);
-				transformacion(getData(messages));
-				
+				ArrayList<Person> data = getData(messages);
+//				transformacion(getData(messages));
 				//Envio de la información(obj) al agent3
 				ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
 				AID receiver = getAddress("Interfaz");
-				request.addReceiver(receiver);
-				request.setContentObject((Serializable)obj);
-				this.myAgent.send(request);
-				System.out.println("Agente2: Mensaje enviado");
-
+				send(receiver, "REQUEST", data);
 			}
 			//EN EL CASO DE QUE SE PRODUZCA UN ERROR ENVIAR UN FAILURE AL AGENT3: Hay que limpiarlo
 			catch (IOException e) {
-				System.out.println("No existe el fichero");
+				System.out.println("Agente2: No existe el fichero");
 				AID receiver = getAddress("Error");
-				ACLMessage request = new ACLMessage(ACLMessage.FAILURE);
-				request.addReceiver(receiver);
-				request.setContent("Cambiar este texto por el objeto a enviar");
-				this.myAgent.send(request);
-				System.out.println("Agente1: Mensaje enviado");
-				
+				send(receiver, "FAILURE", null);
 			} catch (UnreadableException e) {
 				System.out.println("No existe el fichero");
 				AID receiver = getAddress("Error");
-				ACLMessage request = new ACLMessage(ACLMessage.FAILURE);
-				request.addReceiver(receiver);
-				request.setContent("Cambiar este texto por el objeto a enviar");
-				this.myAgent.send(request);
-				System.out.println("Agente1: Mensaje enviado");
+				send(receiver, "FAILURE", null);
 				
 			}
 		}
@@ -131,45 +117,7 @@ public class Agent2 extends Agent {
 
 		//h2j
 
-		public  JSONArray transformacion(List<Person>person){
-
-			Iterator<Person> it = person.iterator();
-			Person persona = null; 
-			Sentence mensajes = null;
-			JSONArray json = new JSONArray();
-			JSONObject jsonObj = new JSONObject();
-			JSONObject jsonMsg = new JSONObject();
-			HashMap<String, Object> elem = new HashMap<>(); 
-			HashMap<String,Object> mensaj = new HashMap<>();
-			
-			while(it.hasNext()) {
-				persona = it.next();
-				JSONArray jsonMsgs = new JSONArray();
-				elem.put("name", persona.getName());
-				elem.put("lang", persona.getLang());
-				elem.put("score", persona.getScore());
-				elem.put("magnitude", persona.getMagnitude());
-				
-				
-				
-				Iterator<Sentence> it2 = persona.getSentences().iterator();
-				while(it2.hasNext()) {
-					mensajes = it2.next();				
-					mensaj.put("content", mensajes.getText().getContent());
-					mensaj.put("score", mensajes.getSentiment().getScore());
-					mensaj.put("magnitude", mensajes.getSentiment().getMagnitude());
-					jsonMsgs.add(mensaj);
-			
-				}
-				elem.put("sentences", jsonMsgs);
-				json.add(elem);
-
-			}
-			System.out.println(json);
-			return json;
-
-		}
-
+		
 
 	}
 
@@ -200,6 +148,20 @@ public class Agent2 extends Agent {
 			e.printStackTrace();
 		}
 		return res;
+	}
+	public void send(AID receiver, String tipo, Object content) {
+		ACLMessage request = (tipo.equals("REQUEST")) ? new ACLMessage(ACLMessage.REQUEST): new ACLMessage(ACLMessage.FAILURE);
+		request.addReceiver(receiver);
+//		request.setContent("Cambiar este texto por el objeto a enviar");
+		if(content != null) {
+			try {
+				request.setContentObject((Serializable)content);
+			} catch (IOException e) {
+				
+			}
+		}
+		this.send(request);
+		System.out.println("Agente2: Mensaje enviado");
 	}
 
 	public void setup() {
