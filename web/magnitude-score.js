@@ -4,16 +4,13 @@ google.charts.load('current', {
 google.charts.setOnLoadCallback(drawSeriesChart);
 
 function drawSeriesChart() {
-
-    var data = google.visualization.arrayToDataTable([
-        ['User', 'Magnitude', 'Score', '', 'Number of messages'],
-        ['Alex', 20.12, 0.4, "red", 101],
-        ['Raul', 12.54, -0.23, "green", 20],
-        ['Gema', 25.4, 0.75, "blue", 45],
-        ['Max', 4.04, -0.01, "yellow", 70]
-    ]);
-
-    var options = {
+    const matrix = []
+    matrix.push(['User', 'Magnitude', 'Score', '', 'Number of messages'])
+    peopleData.map(p => {
+        matrix.push([p.name, p.magnitude, p.score, p.name, p.sentences.length])
+    })
+    const data = google.visualization.arrayToDataTable(matrix);
+    const options = {
         title: 'Relation between score and magnitude',
         hAxis: {
             title: 'Magnitude'
@@ -31,8 +28,9 @@ function drawSeriesChart() {
                 fontSize: 11
             }
         },
+        legend: 'none'
     };
 
-    var chart = new google.visualization.BubbleChart(document.getElementById('chart_div'));
+    const chart = new google.visualization.BubbleChart(document.getElementById('magnitude-score-chart'));
     chart.draw(data, options);
 }

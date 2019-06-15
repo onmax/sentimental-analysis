@@ -5,9 +5,12 @@
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <link rel="stylesheet" href="./main.css">
-    <script src="./people-sentiment.js"></script>
+
+    <script src="./people-data.js"></script>
+    <script src="./people-sentiments.js"></script>
     <script src="./languages-chart.js"></script>
     <script src="./magnitude-score.js"></script>
+    <script src="./scatter-chart.js"></script>
 </head>
 
 <body>
@@ -19,9 +22,10 @@
         </div>
     </header>
     <main>
-        <div id="peopleSentimentsChart" style="width: 900px; height: 500px"></div>
-        <div id="languagesChart" style="width: 900px; height: 500px;"></div>
-        <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="languagesChart" style="width: 100%;"></div>
+        <div id="people-sentiments-chart" style="width: 100%; height: 500px"></div>
+        <div id="scatter-chart" style="width: 100%; height: 500px;"></div>
+        <div id="magnitude-score-chart" style="width: 100%; height: 500px;"></div>
     </main>
 </body>
 
