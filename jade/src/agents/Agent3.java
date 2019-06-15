@@ -34,6 +34,7 @@ public class Agent3 extends Agent {
 			try {
 				Object obj = message.getContentObject();
 				RandomAccessFile file = new RandomAccessFile("output.json", "rw");
+				file.setLength(0);
 				if(message.getPerformative() == ACLMessage.REQUEST) {
 					JSONArray result = list2JSON((ArrayList<Person>)obj);
 					file.writeUTF(result.toString());

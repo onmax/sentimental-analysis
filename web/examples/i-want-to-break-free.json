@@ -1,0 +1,119 @@
+[{
+    "score": 0.2,
+    "sentences": [{
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "I want to break free."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "I want to break free."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "I want to break free from your lies."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "You're so self satisfied I don't need you."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "I've got to break free."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "God knows, God knows I want to break free."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "I've fallen in love."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "I've fallen in love for the first time."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "And this time I know it's for real."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "I've fallen in love, yeah."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "God knows, God knows I've fallen in love."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "It's strange but it's true, yeah."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "I can't get over the way you love me like you do."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "But I have to be sure."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "When I walk out that door."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Oh, how I want to be free, baby."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Oh, how I want to be free."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Oh, how I want to break free."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "But life still goes on."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "I can't get used to living without, living without."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Living without you by my side."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "I don't want to live alone, hey."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "God knows, got to make it on my own."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "So baby can't you see."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "I've got to break free."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "I've got to break free."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "I want to break free, yeah."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "I want, I want, I want, I want to break free"
+    }],
+    "name": "Queen",
+    "magnitude": 9.1,
+    "lang": "en"
+}]
