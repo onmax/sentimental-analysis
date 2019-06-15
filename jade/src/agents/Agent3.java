@@ -8,6 +8,8 @@ import java.util.List;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
+import com.google.cloud.language.v1.Sentence;
+
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
@@ -34,7 +36,7 @@ public class Agent3 extends Agent {
 				System.out.println("Agente3: Ha llegado el mensaje");
 //				System.out.println("Mensaje: " + obj);
 				
-				//INSERTAR CODIGO AGENTE 3: No se donde está =)
+				//INSERTAR CODIGO AGENTE 3: No se donde estï¿½ =)
 				JSONArray result = transformacion((ArrayList<Person>)obj);
 			} catch (UnreadableException e) {
 				e.printStackTrace();
