@@ -37,7 +37,7 @@ public class Agent3 extends Agent {
 					Object obj = message.getContentObject();
 					//				System.out.println("Mensaje: " + obj);
 					//INSERTAR CODIGO AGENTE 3: No se donde estï¿½ =)
-					JSONArray result = transformacion((ArrayList<Person>)obj);
+					JSONArray result = list2JSON((ArrayList<Person>)obj);
 				}
 				else {
 					System.out.println("Agente3: Ha llegado un mensaje de error");
@@ -48,43 +48,36 @@ public class Agent3 extends Agent {
 			}
 
 		}
-		public  JSONArray transformacion(List<Person>person){
-
-			Iterator<Person> it = person.iterator();
-			Person persona = null; 
-			Sentence mensajes = null;
+		public JSONArray list2JSON(List<Person> people){
+			Iterator<Person> it1 = people.iterator();
+			Person person; 
+			Sentence sentence;
 			JSONArray json = new JSONArray();
-			JSONObject jsonObj = new JSONObject();
-			JSONObject jsonMsg = new JSONObject();
-			HashMap<String, Object> elem = new HashMap<>(); 
-			HashMap<String,Object> mensaj = new HashMap<>();
+			HashMap<String, Object> personJSON; 
+			HashMap<String,Object> sentences;
 
-			while(it.hasNext()) {
-				persona = it.next();
-				JSONArray jsonMsgs = new JSONArray();
-				elem.put("name", persona.getName());
-				elem.put("lang", persona.getLang());
-				elem.put("score", persona.getScore());
-				elem.put("magnitude", persona.getMagnitude());
-
-
-
-				Iterator<Sentence> it2 = persona.getSentences().iterator();
+			while(it1.hasNext()) {
+				person = it1.next();
+				JSONArray sentencesJSON = new JSONArray();
+				sentences = new HashMap<>();
+				Iterator<Sentence> it2 = person.getSentences().iterator();
 				while(it2.hasNext()) {
-					mensajes = it2.next();				
-					mensaj.put("content", mensajes.getText().getContent());
-					mensaj.put("score", mensajes.getSentiment().getScore());
-					mensaj.put("magnitude", mensajes.getSentiment().getMagnitude());
-					jsonMsgs.add(mensaj);
-
+					sentence = it2.next();				
+					sentences.put("content", sentence.getText().getContent());
+					sentences.put("score", sentence.getSentiment().getScore());
+					sentences.put("magnitude", sentence.getSentiment().getMagnitude());
+					sentencesJSON.add(sentences);
 				}
-				elem.put("sentences", jsonMsgs);
-				json.add(elem);
-
+				
+				personJSON = new HashMap<>();
+				personJSON.put("name", person.getName());
+				personJSON.put("lang", person.getLang());
+				personJSON.put("score", person.getScore());
+				personJSON.put("magnitude", person.getMagnitude());
+				personJSON.put("sentences", sentencesJSON);
+				json.add(personJSON);
 			}
-			System.out.println(json);
 			return json;
-
 		}
 
 	}
