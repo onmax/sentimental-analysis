@@ -5,12 +5,15 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.Serializable;
 import java.util.HashMap;
+
+import jade.content.lang.sl.SLCodec;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.Envelope;
 import jade.domain.FIPAAgentManagement.SearchConstraints;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;;
@@ -54,6 +57,9 @@ public class Agent1 extends Agent {
 //		request.setContent("Cambiar este texto por el objeto a enviar");
 		if(content != null) {
 			try {
+				request.setLanguage(new SLCodec().getName());
+				request.setEnvelope(new Envelope());
+				request.getEnvelope().setPayloadEncoding("ISO8859_1");
 				request.setContentObject((Serializable)content);
 			} catch (IOException e) {
 				
