@@ -8,7 +8,6 @@ import java.util.Iterator;
 import java.util.List;
 
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 
 import com.google.cloud.language.v1.Sentence;
 
