@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import jade.content.lang.sl.SLCodec;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
@@ -13,6 +14,7 @@ import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.Envelope;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
@@ -30,49 +32,29 @@ import org.json.simple.JSONObject;
 public class Agent2 extends Agent {
 
 	private static final long serialVersionUID = 1L;
-	
+
 	public class Analisis extends OneShotBehaviour { 
 		private static final long serialVersionUID = 1L;
-		//A Agent2 solo le tienen que llegar request, no failure
 		private final MessageTemplate mt = MessageTemplate.MatchPerformative(ACLMessage.REQUEST);
-		
 		public void action() {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
+			AID receiver = getAddress("interface");
 			try {
 				Object obj = message.getContentObject();
-//				Object obj = message.getContent();
-				System.out.println("Agent: Ha llegado el mensaje");
+				System.out.println("Agent2: Ha llegado el mensaje");
 				System.out.println("Mensaje: " + obj);
-				
-				//INSERTAR CÓDIGO DE FUNCIONES AGENTE 2
-				
-				// Example HashMap
 				HashMap<String, String> messages = (HashMap<String,String>)obj;
-//				String str = "Esto es un mensaje sin sentimiento. Odio tener que ir a misa. Te amo. Que bonito día. Quiero mucho a mi mama";
-//				messages.put("Alex", str);
-
-				//		transformacion(messages);
-
 				ArrayList<Person> data = getData(messages);
-//				transformacion(getData(messages));
-				//Envio de la información(obj) al agent3
-				ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
-				AID receiver = getAddress("Interfaz");
+				getData(messages);
 				send(receiver, "REQUEST", data);
-			}
-			//EN EL CASO DE QUE SE PRODUZCA UN ERROR ENVIAR UN FAILURE AL AGENT3: Hay que limpiarlo
-			catch (IOException e) {
-				System.out.println("Agente2: No existe el fichero");
-				AID receiver = getAddress("Error");
-				send(receiver, "FAILURE", null);
+			}catch (IOException e) {
+				send(receiver, "FAILURE", "Agente2: IOException");
 			} catch (UnreadableException e) {
-				System.out.println("No existe el fichero");
-				AID receiver = getAddress("Error");
-				send(receiver, "FAILURE", null);
-				
+				send(receiver, "FAILURE", "Agent2: UnreadableException");
 			}
 		}
-		public  Person getPersonSentiment(LanguageServiceClient client, String name, String messages) {
+
+		public  Person getPersonSentiment(LanguageServiceClient client, String name, String messages){
 			Document doc = Document.newBuilder().setContent(messages).setType(Type.PLAIN_TEXT).build();
 			AnalyzeSentimentResponse response = client.analyzeSentiment(doc);
 
@@ -90,6 +72,7 @@ public class Agent2 extends Agent {
 			Person p = new Person(name, lang, score, magnitude, sentences);
 			return p;
 		}
+
 		public  void printPersonData(Person p) {
 			System.out.println("-------------------------------");
 			System.out.printf("Nombre: %s\nLang: %s\n", p.getName(), p.getLang());
@@ -114,21 +97,13 @@ public class Agent2 extends Agent {
 
 			return data;
 		}
-
-		//h2j
-
-		
-
 	}
 
-	public AID getAddress (String service){
+	public AID getAddress (String serviceType){
 		AID res = new AID();
 		DFAgentDescription template=new DFAgentDescription();
 		ServiceDescription templateSd=new ServiceDescription();
-		templateSd.setName(service);
-		//Poned el nombre que querais
-//		templateSd.setName("Interfaz");
-//		templateSd.setType("Interfaz");
+		templateSd.setType(serviceType);
 		template.addServices(templateSd);
 		try {
 			boolean encontrado = false;
@@ -149,16 +124,18 @@ public class Agent2 extends Agent {
 		}
 		return res;
 	}
+
 	public void send(AID receiver, String tipo, Object content) {
 		ACLMessage request = (tipo.equals("REQUEST")) ? new ACLMessage(ACLMessage.REQUEST): new ACLMessage(ACLMessage.FAILURE);
 		request.addReceiver(receiver);
-//		request.setContent("Cambiar este texto por el objeto a enviar");
-		if(content != null) {
-			try {
-				request.setContentObject((Serializable)content);
-			} catch (IOException e) {
-				
-			}
+		request.setLanguage(new SLCodec().getName());
+		request.setEnvelope(new Envelope());
+		request.getEnvelope().setPayloadEncoding("ISO8859_1");
+		try {
+			request.setContentObject((Serializable)content);
+		} catch (IOException e) {
+			System.out.println("Agent2: IOException");
+			e.printStackTrace();
 		}
 		this.send(request);
 		System.out.println("Agente2: Mensaje enviado");
@@ -168,17 +145,15 @@ public class Agent2 extends Agent {
 		DFAgentDescription dfd = new DFAgentDescription();
 		dfd.setName(getAID());
 		ServiceDescription sd = new ServiceDescription();
-		//Poned el nombre que querais
-		sd.setName("EnviarMensajes");
-		sd.setType("Mensajes");
+		sd.setName("Analyzer");
+		sd.setType("analyse");
 		dfd.addServices(sd);
 		try {
-			DFService.register( this, dfd);
+			DFService.register(this, dfd);
 			System.out.println("Agent2: Servicio publicado");
-			addBehaviour(new Analisis());
 		} catch (FIPAException e) {
 			e.printStackTrace();
 		}
+		addBehaviour(new Analisis());
 	}
-
 }

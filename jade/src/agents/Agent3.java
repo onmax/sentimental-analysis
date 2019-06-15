@@ -31,31 +31,28 @@ public class Agent3 extends Agent {
 		public void action() {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
 			try {
-				//Comprobar el tipo de mensaje failure o request: No se como hacerlo
-				System.out.println("Agente3: Ha llegado el mensaje");
+				Object obj = message.getContentObject();
 				if(message.getPerformative() == ACLMessage.REQUEST) {
-					Object obj = message.getContentObject();
-					//				System.out.println("Mensaje: " + obj);
-					//INSERTAR CODIGO AGENTE 3: No se donde estï¿½ =)
 					JSONArray result = transformacion((ArrayList<Person>)obj);
 				}
 				else {
-					System.out.println("Agente3: Ha llegado un mensaje de error");
+					String error = (String)obj;
+					//Pasarlo a JSON?
 				}
+
+				//Enviar a la API
+
+
 			} catch (UnreadableException e) {
 				e.printStackTrace();
-				//Enviar error a la api
 			}
-
 		}
-		public  JSONArray transformacion(List<Person>person){
 
+		public  JSONArray transformacion(List<Person>person){
 			Iterator<Person> it = person.iterator();
 			Person persona = null; 
 			Sentence mensajes = null;
 			JSONArray json = new JSONArray();
-			JSONObject jsonObj = new JSONObject();
-			JSONObject jsonMsg = new JSONObject();
 			HashMap<String, Object> elem = new HashMap<>(); 
 			HashMap<String,Object> mensaj = new HashMap<>();
 
@@ -86,25 +83,20 @@ public class Agent3 extends Agent {
 			return json;
 
 		}
-
 	}
 
 	public void setup() {
 		DFAgentDescription dfd = new DFAgentDescription();
 		dfd.setName(getAID());
 		ServiceDescription sd = new ServiceDescription();
-		//Cambiar nombre
-		sd.setName("Interfaz");
-		sd.setType("Interfaz");
+		sd.setName("Interface");
+		sd.setType("interface");
 		dfd.addServices(sd);
-		sd.setName("Error");
-		sd.setType("Error");
 		try {
 			DFService.register( this, dfd);
 			System.out.println("Agent3: Servicio publicado");
 			addBehaviour(new Interfaz());
 		} catch (FIPAException e) {
-			//Enviar error a la api
 			e.printStackTrace();
 		}
 	}

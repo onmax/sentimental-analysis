@@ -5,12 +5,15 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.io.Serializable;
 import java.util.HashMap;
+
+import jade.content.lang.sl.SLCodec;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.Envelope;
 import jade.domain.FIPAAgentManagement.SearchConstraints;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;;
@@ -22,53 +25,50 @@ public class Agent1 extends Agent {
 	private HashMap<String,String> messages = new HashMap<String,String>();
 
 	class DataProccessing extends OneShotBehaviour{
-		
+
 		private static final long serialVersionUID = 1L;
 		public void action() {
 			try {
 				RandomAccessFile file = new RandomAccessFile((String)parameters[0], "r");
 				String line;
 				while((line = file.readLine()) != null){
-					String division [] = line.split(":", 2);
+					String division [] = new String(line.getBytes("ISO-8859-1"), "UTF-8").split(":", 2);
 					messages.put(division[0], division[1]);
 				}
 				file.close();
-				AID receiver = getAddress("EnviarMensajes");
+				AID receiver = getAddress("analyse");
 				send(receiver, "REQUEST", messages);
-			} //Enviar failure: Hay que limpiarlo
+			} 
 			catch (FileNotFoundException e) {
-				System.out.println("Agente1: No existe el fichero");
-				AID receiver = getAddress("Error");
-				//En el failure podemos enviar un texto explicando el error
-				send(receiver, "FAILURE",null);
+				AID receiver = getAddress("interface");
+				send(receiver, "FAILURE", "Agente1: No existe el fichero");
 			} catch (IOException e) {
-				System.out.println("Agente1: No se ha podido leer el fichero");
-				AID receiver = getAddress("Error");
-				send(receiver, "FAILURE", null);
+				AID receiver = getAddress("interface");
+				send(receiver, "FAILURE", "Agente1: No se ha podido leer el fichero");
 			}
 		}
 	}
+
 	public void send(AID receiver, String tipo, Object content) {
 		ACLMessage request = (tipo.equals("REQUEST")) ? new ACLMessage(ACLMessage.REQUEST): new ACLMessage(ACLMessage.FAILURE);
 		request.addReceiver(receiver);
-//		request.setContent("Cambiar este texto por el objeto a enviar");
-		if(content != null) {
-			try {
-				request.setContentObject((Serializable)content);
-			} catch (IOException e) {
-				
-			}
+		request.setLanguage(new SLCodec().getName());
+		request.setEnvelope(new Envelope());
+		request.getEnvelope().setPayloadEncoding("ISO8859_1");
+		try {
+			request.setContentObject((Serializable)content);
+		} catch (IOException e) {
+			System.out.println("Agent1: Error al establecer el contenido");
 		}
-		this.send(request);
+		send(request);
 		System.out.println("Agente1: Mensaje enviado");
 	}
-	public AID getAddress (String service){
+
+	public AID getAddress (String serviceType){
 		AID res = new AID();
-		DFAgentDescription template=new DFAgentDescription();
-		ServiceDescription templateSd=new ServiceDescription();
-		templateSd.setName(service);
-//		templateSd.setName("EnviarMensajes");
-//		templateSd.setType("Mensajes");
+		DFAgentDescription template = new DFAgentDescription();
+		ServiceDescription templateSd = new ServiceDescription();
+		templateSd.setType(serviceType);
 		template.addServices(templateSd);
 		try {
 			boolean encontrado = false;
@@ -78,10 +78,10 @@ public class Agent1 extends Agent {
 				if(results.length > 0) {
 					System.out.println("Agent1: Encontrado el servicio");
 					DFAgentDescription dfd = results[0];
-					System.out.println("Nombre del agente: " + dfd.getName().getName());
-					System.out.println("Direccion: " + dfd.getName().getAddressesArray()[0]);
-					encontrado = true;
 					res = dfd.getName();
+					System.out.println("Nombre del agente: " + res.getName());
+					System.out.println("Direccion: " + res.getAddressesArray()[0]);
+					encontrado = true;
 				}
 			}
 		}
@@ -96,8 +96,7 @@ public class Agent1 extends Agent {
 		if(parameters == null){
 			System.out.println("Introduce el argumento");
 		}else{
-			DataProccessing dp = new DataProccessing();
-			addBehaviour(dp);
+			addBehaviour(new DataProccessing());
 		}
 	}
 }
