@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import jade.content.lang.sl.SLCodec;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.core.behaviours.Behaviour;
@@ -13,6 +14,7 @@ import jade.core.behaviours.OneShotBehaviour;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
+import jade.domain.FIPAAgentManagement.Envelope;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 import jade.lang.acl.ACLMessage;
 import jade.lang.acl.MessageTemplate;
@@ -44,18 +46,18 @@ public class Agent2 extends Agent {
 				System.out.println("Agent: Ha llegado el mensaje");
 				System.out.println("Mensaje: " + obj);
 				
-				//INSERTAR CÓDIGO DE FUNCIONES AGENTE 2
+				//INSERTAR CÃ“DIGO DE FUNCIONES AGENTE 2
 				
 				// Example HashMap
 				HashMap<String, String> messages = (HashMap<String,String>)obj;
-//				String str = "Esto es un mensaje sin sentimiento. Odio tener que ir a misa. Te amo. Que bonito día. Quiero mucho a mi mama";
+//				String str = "Esto es un mensaje sin sentimiento. Odio tener que ir a misa. Te amo. Que bonito dÃ­a. Quiero mucho a mi mama";
 //				messages.put("Alex", str);
 
 				//		transformacion(messages);
 
 				ArrayList<Person> data = getData(messages);
 //				transformacion(getData(messages));
-				//Envio de la información(obj) al agent3
+				//Envio de la informaciÃ³n(obj) al agent3
 				ACLMessage request = new ACLMessage(ACLMessage.REQUEST);
 				AID receiver = getAddress("Interfaz");
 				send(receiver, "REQUEST", data);
@@ -155,6 +157,9 @@ public class Agent2 extends Agent {
 //		request.setContent("Cambiar este texto por el objeto a enviar");
 		if(content != null) {
 			try {
+				request.setLanguage(new SLCodec().getName());
+				request.setEnvelope(new Envelope());
+				request.getEnvelope().setPayloadEncoding("ISO8859_1");
 				request.setContentObject((Serializable)content);
 			} catch (IOException e) {
 				
