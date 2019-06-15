@@ -38,6 +38,9 @@ public class Agent3 extends Agent {
 					//				System.out.println("Mensaje: " + obj);
 					//INSERTAR CODIGO AGENTE 3: No se donde estï¿½ =)
 					JSONArray result = list2JSON((ArrayList<Person>)obj);
+					RandomAccessFile file = new RandomAccessFile("res.txt", "rw");
+					file.write(result.toString().getBytes(),0,result.toString().length());
+					file.close();
 				}
 				else {
 					System.out.println("Agente3: Ha llegado un mensaje de error");
