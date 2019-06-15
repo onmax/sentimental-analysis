@@ -1,0 +1,111 @@
+[{
+    "score": 0.2,
+    "sentences": [{
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "In the town where I was born."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "Lived a man who sailed to sea."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "And he told us of his life."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "In the land of submarines."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "So we sailed up to the sun."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "'Til we found a sea of green."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "And we lived beneath the waves."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "In our yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "We all live in a yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Yellow submarine, yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "We all live in a yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Yellow submarine, yellow submarine."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "And our friends are all aboard."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Many more of them live next door."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "And the band begins to play."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "We all live in a yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Yellow submarine, yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "We all live in a yellow submarine."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Yellow submarine, yellow submarine."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "(Full speed ahead Mr. Parker, full speed ahead."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "Full speed ahead it is, Sergeant."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "Action station, action station."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Aye, aye, sir, fire."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Captain, captain)."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "As we live a life of ease."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Everyone\u2026"
+    }],
+    "name": "The Beatles",
+    "magnitude": 6.4,
+    "lang": "en"
+}]

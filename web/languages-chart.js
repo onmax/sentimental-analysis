@@ -9,7 +9,7 @@ function drawTable() {
 	data.addColumn('string', 'Language');
 	data.addColumn('number', 'Score');
 	data.addColumn('number', 'Magnitude');
-	data.addColumn('number', 'number of messages');
+	data.addColumn('number', 'Number of sentences');
 	peopleData.map(p => {
 		data.addRow([p.name, p.lang, p.score, p.magnitude, p.sentences.length])
 	})
