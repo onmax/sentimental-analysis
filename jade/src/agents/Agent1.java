@@ -32,7 +32,7 @@ public class Agent1 extends Agent {
 				RandomAccessFile file = new RandomAccessFile((String)parameters[0], "r");
 				String line;
 				while((line = file.readLine()) != null){
-					String division [] = line.split(":", 2);
+					String division [] = new String(line.getBytes("ISO-8859-1"), "UTF-8").split(":", 2);
 					messages.put(division[0], division[1]);
 				}
 				file.close();
