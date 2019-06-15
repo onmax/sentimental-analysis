@@ -97,11 +97,10 @@ public class Agent3 extends Agent {
 		try {
 			DFService.register( this, dfd);
 			System.out.println("Agent3: Servicio publicado");
+			addBehaviour(new Interfaz());
 		} catch (FIPAException e) {
 			//Enviar error a la api
 			e.printStackTrace();
 		}
-		addBehaviour(new Interfaz());
-
 	}
 }
