@@ -32,12 +32,16 @@ public class Agent3 extends Agent {
 			ACLMessage message = this.myAgent.blockingReceive(mt);
 			try {
 				//Comprobar el tipo de mensaje failure o request: No se como hacerlo
-				Object obj = message.getContentObject();
 				System.out.println("Agente3: Ha llegado el mensaje");
-//				System.out.println("Mensaje: " + obj);
-				
-				//INSERTAR CODIGO AGENTE 3: No se donde est� =)
-				JSONArray result = transformacion((ArrayList<Person>)obj);
+				if(message.getPerformative() == ACLMessage.REQUEST) {
+					Object obj = message.getContentObject();
+					//				System.out.println("Mensaje: " + obj);
+					//INSERTAR CODIGO AGENTE 3: No se donde estï¿½ =)
+					JSONArray result = transformacion((ArrayList<Person>)obj);
+				}
+				else {
+					System.out.println("Agente3: Ha llegado un mensaje de error");
+				}
 			} catch (UnreadableException e) {
 				e.printStackTrace();
 				//Enviar error a la api
@@ -54,7 +58,7 @@ public class Agent3 extends Agent {
 			JSONObject jsonMsg = new JSONObject();
 			HashMap<String, Object> elem = new HashMap<>(); 
 			HashMap<String,Object> mensaj = new HashMap<>();
-			
+
 			while(it.hasNext()) {
 				persona = it.next();
 				JSONArray jsonMsgs = new JSONArray();
@@ -62,9 +66,9 @@ public class Agent3 extends Agent {
 				elem.put("lang", persona.getLang());
 				elem.put("score", persona.getScore());
 				elem.put("magnitude", persona.getMagnitude());
-				
-				
-				
+
+
+
 				Iterator<Sentence> it2 = persona.getSentences().iterator();
 				while(it2.hasNext()) {
 					mensajes = it2.next();				
@@ -72,7 +76,7 @@ public class Agent3 extends Agent {
 					mensaj.put("score", mensajes.getSentiment().getScore());
 					mensaj.put("magnitude", mensajes.getSentiment().getMagnitude());
 					jsonMsgs.add(mensaj);
-			
+
 				}
 				elem.put("sentences", jsonMsgs);
 				json.add(elem);
@@ -91,7 +95,6 @@ public class Agent3 extends Agent {
 		ServiceDescription sd = new ServiceDescription();
 		//Cambiar nombre
 		sd.setName("Interfaz");
-		//No se para que ponemos type
 		sd.setType("Interfaz");
 		dfd.addServices(sd);
 		sd.setName("Error");
