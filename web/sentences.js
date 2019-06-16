@@ -13,7 +13,7 @@ function drawSentencesTable() {
 	peopleData.map((p, i) => {
 		rows.push(p.sentences.map(s => [s.content, s.score, s.magnitude]))
 		buttons[i].addEventListener("click", () => {
-			data.removeRows(0, data.getNumberOfRows() - 1)
+			data.removeRows(0, data.getNumberOfRows())
 			data.addRows(rows[i])
 			var table = new google.visualization.Table(document.getElementById('sentences'));
 			table.draw(data, {

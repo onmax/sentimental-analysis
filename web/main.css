@@ -40,3 +40,20 @@ hr {
 button {
     margin: 10px 10px 20px 10px;
 }
+
+.navbar {
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar:hover {
+    background: #0f2862;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}

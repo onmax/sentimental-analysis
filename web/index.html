@@ -1,53 +1,43 @@
 <html>
-  <head>
-    <link
-      href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
 
-    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
-    <script
-      type="text/javascript"
-      src="https://www.gstatic.com/charts/loader.js"
-    ></script>
-    <link rel="stylesheet" href="./main.css" />
-  </head>
+<head>
+  <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 
-  <body>
-    <header class="mdc-top-app-bar">
-      <div class="mdc-top-app-bar__row">
-        <section
-          class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start"
-        >
-          <span class="mdc-top-app-bar__title">Sentimental analysis</span>
-        </section>
-      </div>
-    </header>
-    <main>
-      <div id="languagesChart" style="width: 1000px;"></div>
-      <div
-        id="people-sentiments-chart"
-        style="width: 1000px; height: 500px"
-      ></div>
-      <div id="scatter-chart" style="width: 1000px; height: 500px;"></div>
-      <div
-        id="magnitude-score-chart"
-        style="width: 1000px; height: 500px;"
-      ></div>
-      <hr />
-      <div class="buttons"></div>
-      <div id="sentences" style="width: 1000px;"></div>
-    </main>
-  </body>
-  <script async src="./people-data.js"></script>
-  <script src="./sentences.js"></script>
+  <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <link rel="stylesheet" href="./main.css" />
+</head>
 
-  <script src="./people-sentiments.js"></script>
-  <script src="./languages-chart.js"></script>
-  <script src="./magnitude-score.js"></script>
-  <script src="./scatter-chart.js"></script>
+<body>
+  <header class="mdc-top-app-bar">
+    <div class="mdc-top-app-bar__row">
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+        <span class="mdc-top-app-bar__title">Sentimental analysis</span>
+      </section>
+      <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+        <a href="/"><span class="mdc-top-app-bar__title navbar">Demo</span></a>
+        <a href="/songs"><span class="mdc-top-app-bar__title navbar">Songs</span></a>
+        <a href="/3-little-pigs"><span class="mdc-top-app-bar__title navbar">The Three Little Pigs</span></a>
+      </section>
+    </div>
+  </header>
+  <main>
+    <div id="languagesChart" style="width: 1000px;"></div>
+    <div id="people-sentiments-chart" style="width: 1000px; height: 500px"></div>
+    <div id="scatter-chart" style="width: 1000px; height: 500px;"></div>
+    <div id="magnitude-score-chart" style="width: 1000px; height: 500px;"></div>
+    <hr />
+    <div class="buttons"></div>
+    <div id="sentences" style="width: 1000px;"></div>
+  </main>
+</body>
+<script async src="./people-data.js"></script>
+<script src="./sentences.js"></script>
+
+<script src="./people-sentiments.js"></script>
+<script src="./languages-chart.js"></script>
+<script src="./magnitude-score.js"></script>
+<script src="./scatter-chart.js"></script>
+
 </html>
