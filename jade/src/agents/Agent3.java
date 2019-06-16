@@ -52,38 +52,38 @@ public class Agent3 extends Agent {
 				e.printStackTrace();
 			}
 		}
+	}
 
-		public JSONArray list2JSON(List<Person> people){
-			Iterator<Person> it1 = people.iterator();
-			Person person; 
-			Sentence sentence;
-			JSONArray json = new JSONArray();
-			HashMap<String, Object> personJSON; 
-			HashMap<String,Object> sentences;
+	public JSONArray list2JSON(List<Person> people){
+		Iterator<Person> it1 = people.iterator();
+		Person person; 
+		Sentence sentence;
+		JSONArray json = new JSONArray();
+		HashMap<String, Object> personJSON; 
+		HashMap<String,Object> sentences;
 
-			while(it1.hasNext()) {
-				person = it1.next();
-				JSONArray sentencesJSON = new JSONArray();
-				Iterator<Sentence> it2 = person.getSentences().iterator();
-				while(it2.hasNext()) {
-					sentences = new HashMap<>();
-					sentence = it2.next();				
-					sentences.put("content", sentence.getText().getContent());
-					sentences.put("score", sentence.getSentiment().getScore());
-					sentences.put("magnitude", sentence.getSentiment().getMagnitude());
-					sentencesJSON.add(sentences);
-				}
-
-				personJSON = new HashMap<>();
-				personJSON.put("name", person.getName());
-				personJSON.put("lang", person.getLang());
-				personJSON.put("score", person.getScore());
-				personJSON.put("magnitude", person.getMagnitude());
-				personJSON.put("sentences", sentencesJSON);
-				json.add(personJSON);
+		while(it1.hasNext()) {
+			person = it1.next();
+			JSONArray sentencesJSON = new JSONArray();
+			Iterator<Sentence> it2 = person.getSentences().iterator();
+			while(it2.hasNext()) {
+				sentences = new HashMap<>();
+				sentence = it2.next();				
+				sentences.put("content", sentence.getText().getContent());
+				sentences.put("score", sentence.getSentiment().getScore());
+				sentences.put("magnitude", sentence.getSentiment().getMagnitude());
+				sentencesJSON.add(sentences);
 			}
-			return json;
+
+			personJSON = new HashMap<>();
+			personJSON.put("name", person.getName());
+			personJSON.put("lang", person.getLang());
+			personJSON.put("score", person.getScore());
+			personJSON.put("magnitude", person.getMagnitude());
+			personJSON.put("sentences", sentencesJSON);
+			json.add(personJSON);
 		}
+		return json;
 	}
 
 	public void setup() {

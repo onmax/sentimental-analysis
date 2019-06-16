@@ -1,13 +1,11 @@
 package agents;
 
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.List;
 
 import com.google.cloud.language.v1.*;
 
 public class Person implements Serializable{
-
 	private String name;
 	private String lang;
 	private float score;
