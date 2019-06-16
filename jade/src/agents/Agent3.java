@@ -37,7 +37,10 @@ public class Agent3 extends Agent {
 				file.setLength(0);
 				if(message.getPerformative() == ACLMessage.REQUEST) {
 					JSONArray result = list2JSON((ArrayList<Person>)obj);
-					file.writeUTF(result.toString());
+					byte[] bytes = result.toString().getBytes("utf-8");
+					for(int i=0;i<bytes.length; i++) {
+						file.write(bytes[i]);
+					}
 				}
 				else {
 					file.writeUTF((String)obj);
