@@ -4,7 +4,7 @@
   "entries": [
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9-sources.jar",
       "path": "com/fasterxml/jackson/core/jackson-core/2.9.9/jackson-core-2.9.9.jar",
       "attributes": [
         {
@@ -35,7 +35,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4-sources.jar",
       "path": "com/google/android/annotations/4.1.1.4/annotations-4.1.1.4.jar",
       "attributes": [
         {
@@ -66,7 +66,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api-client/google-api-client/1.28.0/google-api-client-1.28.0-sources.jar",
       "path": "com/google/api-client/google-api-client/1.28.0/google-api-client-1.28.0.jar",
       "attributes": [
         {
@@ -97,7 +97,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/grpc/proto-google-cloud-datastore-v1/0.57.0/proto-google-cloud-datastore-v1-0.57.0-sources.jar",
       "path": "com/google/api/grpc/proto-google-cloud-datastore-v1/0.57.0/proto-google-cloud-datastore-v1-0.57.0.jar",
       "attributes": [
         {
@@ -128,7 +128,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/grpc/proto-google-cloud-language-v1/1.60.0/proto-google-cloud-language-v1-1.60.0-sources.jar",
       "path": "com/google/api/grpc/proto-google-cloud-language-v1/1.60.0/proto-google-cloud-language-v1-1.60.0.jar",
       "attributes": [
         {
@@ -159,7 +159,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/grpc/proto-google-cloud-language-v1beta2/0.61.0/proto-google-cloud-language-v1beta2-0.61.0-sources.jar",
       "path": "com/google/api/grpc/proto-google-cloud-language-v1beta2/0.61.0/proto-google-cloud-language-v1beta2-0.61.0.jar",
       "attributes": [
         {
@@ -190,7 +190,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/grpc/proto-google-common-protos/1.16.0/proto-google-common-protos-1.16.0-sources.jar",
       "path": "com/google/api/grpc/proto-google-common-protos/1.16.0/proto-google-common-protos-1.16.0.jar",
       "attributes": [
         {
@@ -221,7 +221,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/grpc/proto-google-iam-v1/0.12.0/proto-google-iam-v1-0.12.0-sources.jar",
       "path": "com/google/api/grpc/proto-google-iam-v1/0.12.0/proto-google-iam-v1-0.12.0.jar",
       "attributes": [
         {
@@ -252,7 +252,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/api-common/1.8.1/api-common-1.8.1-sources.jar",
       "path": "com/google/api/api-common/1.8.1/api-common-1.8.1.jar",
       "attributes": [
         {
@@ -283,7 +283,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/gax/1.45.0/gax-1.45.0-sources.jar",
       "path": "com/google/api/gax/1.45.0/gax-1.45.0.jar",
       "attributes": [
         {
@@ -314,7 +314,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/gax-grpc/1.45.0/gax-grpc-1.45.0-sources.jar",
       "path": "com/google/api/gax-grpc/1.45.0/gax-grpc-1.45.0.jar",
       "attributes": [
         {
@@ -345,7 +345,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/api/gax-httpjson/0.61.0/gax-httpjson-0.61.0-sources.jar",
       "path": "com/google/api/gax-httpjson/0.61.0/gax-httpjson-0.61.0.jar",
       "attributes": [
         {
@@ -376,7 +376,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/auth/google-auth-library-credentials/0.16.1/google-auth-library-credentials-0.16.1-sources.jar",
       "path": "com/google/auth/google-auth-library-credentials/0.16.1/google-auth-library-credentials-0.16.1.jar",
       "attributes": [
         {
@@ -407,7 +407,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/auth/google-auth-library-oauth2-http/0.16.1/google-auth-library-oauth2-http-0.16.1-sources.jar",
       "path": "com/google/auth/google-auth-library-oauth2-http/0.16.1/google-auth-library-oauth2-http-0.16.1.jar",
       "attributes": [
         {
@@ -438,7 +438,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/cloud/datastore/datastore-v1-proto-client/1.6.0/datastore-v1-proto-client-1.6.0-sources.jar",
       "path": "com/google/cloud/datastore/datastore-v1-proto-client/1.6.0/datastore-v1-proto-client-1.6.0.jar",
       "attributes": [
         {
@@ -469,7 +469,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/cloud/google-cloud-core/1.78.0/google-cloud-core-1.78.0-sources.jar",
       "path": "com/google/cloud/google-cloud-core/1.78.0/google-cloud-core-1.78.0.jar",
       "attributes": [
         {
@@ -500,7 +500,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/cloud/google-cloud-core-grpc/1.78.0/google-cloud-core-grpc-1.78.0-sources.jar",
       "path": "com/google/cloud/google-cloud-core-grpc/1.78.0/google-cloud-core-grpc-1.78.0.jar",
       "attributes": [
         {
@@ -531,7 +531,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/cloud/google-cloud-core-http/1.74.0/google-cloud-core-http-1.74.0-sources.jar",
       "path": "com/google/cloud/google-cloud-core-http/1.74.0/google-cloud-core-http-1.74.0.jar",
       "attributes": [
         {
@@ -562,7 +562,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/cloud/google-cloud-datastore/1.74.0/google-cloud-datastore-1.74.0-sources.jar",
       "path": "com/google/cloud/google-cloud-datastore/1.74.0/google-cloud-datastore-1.74.0.jar",
       "attributes": [
         {
@@ -593,7 +593,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/cloud/google-cloud-language/1.78.0/google-cloud-language-1.78.0-sources.jar",
       "path": "com/google/cloud/google-cloud-language/1.78.0/google-cloud-language-1.78.0.jar",
       "attributes": [
         {
@@ -624,7 +624,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2-sources.jar",
       "path": "com/google/code/findbugs/jsr305/3.0.2/jsr305-3.0.2.jar",
       "attributes": [
         {
@@ -655,7 +655,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/code/gson/gson/2.7/gson-2.7-sources.jar",
       "path": "com/google/code/gson/gson/2.7/gson-2.7.jar",
       "attributes": [
         {
@@ -686,7 +686,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3-sources.jar",
       "path": "com/google/errorprone/error_prone_annotations/2.3.3/error_prone_annotations-2.3.3.jar",
       "attributes": [
         {
@@ -717,7 +717,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1-sources.jar",
       "path": "com/google/guava/failureaccess/1.0.1/failureaccess-1.0.1.jar",
       "attributes": [
         {
@@ -748,7 +748,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/guava/guava/27.1-android/guava-27.1-android-sources.jar",
       "path": "com/google/guava/guava/27.1-android/guava-27.1-android.jar",
       "attributes": [
         {
@@ -810,7 +810,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/http-client/google-http-client/1.30.1/google-http-client-1.30.1-sources.jar",
       "path": "com/google/http-client/google-http-client/1.30.1/google-http-client-1.30.1.jar",
       "attributes": [
         {
@@ -841,7 +841,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/http-client/google-http-client-apache/2.0.0/google-http-client-apache-2.0.0-sources.jar",
       "path": "com/google/http-client/google-http-client-apache/2.0.0/google-http-client-apache-2.0.0.jar",
       "attributes": [
         {
@@ -872,7 +872,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/http-client/google-http-client-appengine/1.29.1/google-http-client-appengine-1.29.1-sources.jar",
       "path": "com/google/http-client/google-http-client-appengine/1.29.1/google-http-client-appengine-1.29.1.jar",
       "attributes": [
         {
@@ -903,7 +903,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0-sources.jar",
       "path": "com/google/http-client/google-http-client-jackson/1.20.0/google-http-client-jackson-1.20.0.jar",
       "attributes": [
         {
@@ -934,7 +934,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/http-client/google-http-client-jackson2/1.30.1/google-http-client-jackson2-1.30.1-sources.jar",
       "path": "com/google/http-client/google-http-client-jackson2/1.30.1/google-http-client-jackson2-1.30.1.jar",
       "attributes": [
         {
@@ -965,7 +965,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/http-client/google-http-client-protobuf/1.20.0/google-http-client-protobuf-1.20.0-sources.jar",
       "path": "com/google/http-client/google-http-client-protobuf/1.20.0/google-http-client-protobuf-1.20.0.jar",
       "attributes": [
         {
@@ -996,7 +996,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3-sources.jar",
       "path": "com/google/j2objc/j2objc-annotations/1.3/j2objc-annotations-1.3.jar",
       "attributes": [
         {
@@ -1027,7 +1027,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/oauth-client/google-oauth-client/1.20.0/google-oauth-client-1.20.0-sources.jar",
       "path": "com/google/oauth-client/google-oauth-client/1.20.0/google-oauth-client-1.20.0.jar",
       "attributes": [
         {
@@ -1058,7 +1058,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1-sources.jar",
       "path": "com/google/protobuf/protobuf-java/3.7.1/protobuf-java-3.7.1.jar",
       "attributes": [
         {
@@ -1089,7 +1089,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/google/protobuf/protobuf-java-util/3.7.1/protobuf-java-util-3.7.1-sources.jar",
       "path": "com/google/protobuf/protobuf-java-util/3.7.1/protobuf-java-util-3.7.1.jar",
       "attributes": [
         {
@@ -1120,7 +1120,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/com/googlecode/objectify/objectify/6.0.4/objectify-6.0.4-sources.jar",
       "path": "com/googlecode/objectify/objectify/6.0.4/objectify-6.0.4.jar",
       "attributes": [
         {
@@ -1155,7 +1155,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/commons-codec/commons-codec/1.11/commons-codec-1.11-sources.jar",
       "path": "commons-codec/commons-codec/1.11/commons-codec-1.11.jar",
       "attributes": [
         {
@@ -1186,7 +1186,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/commons-logging/commons-logging/1.2/commons-logging-1.2-sources.jar",
       "path": "commons-logging/commons-logging/1.2/commons-logging-1.2.jar",
       "attributes": [
         {
@@ -1217,7 +1217,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-alts/1.21.0/grpc-alts-1.21.0-sources.jar",
       "path": "io/grpc/grpc-alts/1.21.0/grpc-alts-1.21.0.jar",
       "attributes": [
         {
@@ -1248,7 +1248,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-api/1.21.0/grpc-api-1.21.0-sources.jar",
       "path": "io/grpc/grpc-api/1.21.0/grpc-api-1.21.0.jar",
       "attributes": [
         {
@@ -1279,7 +1279,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-auth/1.21.0/grpc-auth-1.21.0-sources.jar",
       "path": "io/grpc/grpc-auth/1.21.0/grpc-auth-1.21.0.jar",
       "attributes": [
         {
@@ -1310,7 +1310,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-context/1.21.0/grpc-context-1.21.0-sources.jar",
       "path": "io/grpc/grpc-context/1.21.0/grpc-context-1.21.0.jar",
       "attributes": [
         {
@@ -1341,7 +1341,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-core/1.21.0/grpc-core-1.21.0-sources.jar",
       "path": "io/grpc/grpc-core/1.21.0/grpc-core-1.21.0.jar",
       "attributes": [
         {
@@ -1372,7 +1372,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-grpclb/1.21.0/grpc-grpclb-1.21.0-sources.jar",
       "path": "io/grpc/grpc-grpclb/1.21.0/grpc-grpclb-1.21.0.jar",
       "attributes": [
         {
@@ -1403,7 +1403,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-netty-shaded/1.21.0/grpc-netty-shaded-1.21.0-sources.jar",
       "path": "io/grpc/grpc-netty-shaded/1.21.0/grpc-netty-shaded-1.21.0.jar",
       "attributes": [
         {
@@ -1434,7 +1434,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-protobuf/1.21.0/grpc-protobuf-1.21.0-sources.jar",
       "path": "io/grpc/grpc-protobuf/1.21.0/grpc-protobuf-1.21.0.jar",
       "attributes": [
         {
@@ -1465,7 +1465,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-protobuf-lite/1.21.0/grpc-protobuf-lite-1.21.0-sources.jar",
       "path": "io/grpc/grpc-protobuf-lite/1.21.0/grpc-protobuf-lite-1.21.0.jar",
       "attributes": [
         {
@@ -1496,7 +1496,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/grpc/grpc-stub/1.21.0/grpc-stub-1.21.0-sources.jar",
       "path": "io/grpc/grpc-stub/1.21.0/grpc-stub-1.21.0.jar",
       "attributes": [
         {
@@ -1527,7 +1527,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/opencensus/opencensus-api/0.21.0/opencensus-api-0.21.0-sources.jar",
       "path": "io/opencensus/opencensus-api/0.21.0/opencensus-api-0.21.0.jar",
       "attributes": [
         {
@@ -1558,7 +1558,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/opencensus/opencensus-contrib-grpc-metrics/0.21.0/opencensus-contrib-grpc-metrics-0.21.0-sources.jar",
       "path": "io/opencensus/opencensus-contrib-grpc-metrics/0.21.0/opencensus-contrib-grpc-metrics-0.21.0.jar",
       "attributes": [
         {
@@ -1589,7 +1589,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/io/opencensus/opencensus-contrib-http-util/0.21.0/opencensus-contrib-http-util-0.21.0-sources.jar",
       "path": "io/opencensus/opencensus-contrib-http-util/0.21.0/opencensus-contrib-http-util-0.21.0.jar",
       "attributes": [
         {
@@ -1620,7 +1620,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-sources.jar",
       "path": "javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2.jar",
       "attributes": [
         {
@@ -1651,7 +1651,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/net/spy/spymemcached/2.12.3/spymemcached-2.12.3-sources.jar",
       "path": "net/spy/spymemcached/2.12.3/spymemcached-2.12.3.jar",
       "attributes": [
         {
@@ -1682,7 +1682,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/apache/commons/commons-lang3/3.5/commons-lang3-3.5-sources.jar",
       "path": "org/apache/commons/commons-lang3/3.5/commons-lang3-3.5.jar",
       "attributes": [
         {
@@ -1713,7 +1713,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8-sources.jar",
       "path": "org/apache/httpcomponents/httpclient/4.5.8/httpclient-4.5.8.jar",
       "attributes": [
         {
@@ -1744,7 +1744,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11-sources.jar",
       "path": "org/apache/httpcomponents/httpcore/4.4.11/httpcore-4.4.11.jar",
       "attributes": [
         {
@@ -1775,7 +1775,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5-sources.jar",
       "path": "org/checkerframework/checker-compat-qual/2.5.5/checker-compat-qual-2.5.5.jar",
       "attributes": [
         {
@@ -1806,7 +1806,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11-sources.jar",
       "path": "org/codehaus/jackson/jackson-core-asl/1.9.11/jackson-core-asl-1.9.11.jar",
       "attributes": [
         {
@@ -1837,7 +1837,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/codehaus/mojo/animal-sniffer-annotations/1.18/animal-sniffer-annotations-1.18-sources.jar",
       "path": "org/codehaus/mojo/animal-sniffer-annotations/1.18/animal-sniffer-annotations-1.18.jar",
       "attributes": [
         {
@@ -1868,7 +1868,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25-sources.jar",
       "path": "org/slf4j/slf4j-api/1.7.25/slf4j-api-1.7.25.jar",
       "attributes": [
         {
@@ -1899,7 +1899,7 @@
     },
     {
       "accessRules": [],
-      "sourceAttachmentPath": "",
+      "sourceAttachmentPath": "BIN/org/threeten/threetenbp/1.3.3/threetenbp-1.3.3-sources.jar",
       "path": "org/threeten/threetenbp/1.3.3/threetenbp-1.3.3.jar",
       "attributes": [
         {
