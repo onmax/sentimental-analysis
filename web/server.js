@@ -29,7 +29,7 @@ app.get('/songs-data', function (req, res) {
 });
 
 app.get('/3-little-pigs-data', function (req, res) {
-    const data = fs.readFileSync(path.join(__dirname + '/examples/3-cerditos.json'), 'utf8')
+    const data = fs.readFileSync(path.join(__dirname + '/examples/3-little-pigs.json'), 'utf8')
     res.send(data);
 });
 
