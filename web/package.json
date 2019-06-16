@@ -1,5 +1,6 @@
 {
 <<<<<<< HEAD
+<<<<<<< HEAD
   "name": "web",
   "version": "1.0.0",
   "description": "web",
@@ -9,6 +10,8 @@
   },
   "author": "Maximum Joseph",
 =======
+=======
+>>>>>>> 132c43565b7959b98f0025f644083d2dc0ce45c7
   "name": "server",
   "version": "1.0.0",
   "description": "a",
@@ -18,6 +21,9 @@
     "start": "node server.js"
   },
   "author": "",
+<<<<<<< HEAD
+>>>>>>> 132c43565b7959b98f0025f644083d2dc0ce45c7
+=======
 >>>>>>> 132c43565b7959b98f0025f644083d2dc0ce45c7
   "license": "ISC",
   "dependencies": {
