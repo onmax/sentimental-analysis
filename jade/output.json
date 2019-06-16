@@ -1,0 +1,631 @@
+[{
+    "score": 0.6,
+    "sentences": [{
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Positiva."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Yo creo que es una idea fantástica y maravillosa, ¿A que sí?."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Max es muy listo e inteligente, es el mejor amigo que puedes tener."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Todos estamos felices y contentos, me encanta mi vida."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "La alegría de saber que este trabajo va a terminar perfecto me reconforta."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Es muy gracioso, me lo pasó muy bien contigo."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Pero el mejor punto de vista es estar alegres e increíblemente bien con uno mismo."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Mientras todos sean felices esta bien, creo yo."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "En el mío hay un montón de flores y arcoíris por doquier, es el lugar más maravilloso y perfecto para entablar una conversación con las personas que más quieres en el mundo."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "Si vinieras aquí estarías más animado, te lo digo yo, aquí repartimos paz y mucho amor hacia el prójimo."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "Ya sabéis, chicos, a demostrar lo mucho que nos queremos en los mensajes."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Chicos, tenéis que hablar más, demostrando lo mucho que nos amamos."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Dime en qué te puedo ayudar, me encanta ayudar a los demás."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Yo te doy otra opción, ser feliz y vivir en armonía con los demás."
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Tenemos que estar todos felices, no seáis melodramáticos."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Tenemos que vivir cada día contentos y en paz con nosotros mismos, y dar gracias a Dios porque nos ha permitido vivirlos."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "Alberto, demuéstranos cuan feliz te hallas en estos momentos."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Perfecto, así podemos demostrarnos lo mucho que nos queremos."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Vamos chicos, a repartir alegría y felicidad por el grupo."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Me caéis muy bien, me siento bastante dichosa por haberos conocido, muchas gracias a todos."
+    }, {
+        "score": -0.6,
+        "magnitude": 0.6,
+        "content": "Raúl, debes estar en paz contigo mismo y repartir amor al prójimo, no odio como estás haciendo ahora mismo."
+    }, {
+        "score": 0.6,
+        "magnitude": 0.6,
+        "content": "Estás en este grupo porque somos lo mejor que te ha pasado en la vida, debes estar agradecido con Dios por eso."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "Totalmente de acuerdo contigo, este chico tiene que aprender a sentir paz consigo mismo y a quererse más."
+    }, {
+        "score": 0.6,
+        "magnitude": 0.6,
+        "content": "Yo te quiero mucho Raúl, y me duele que seas así con los demás, por eso te llevaré al mundo onírico donde podrás estar en armonía contigo mismo."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Oh, no, no, Alex, tú también debes estar tranquilo y sentir que la vida es maravillosa, no hay que usar la violencia para llegar a ser feliz."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Tranquilos, mis niños, la violencia no es la solución, debéis aprender a perdonar y amara al prójimo, como Dios hace con cada uno de nosotros, esta es la única forma para llegar al mundo de los cielos y alcanzar la felicidad absoluta."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "No son misas, es la verdad absoluta, así es como se logra la felicidad, y prometo hacer que la alcancéis, por mucho que me cueste conseguirlo."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "Estoy de acuerdo con Raúl, a Dios no le gustan los insultos, por favor, debéis estar bien con vosotros mismos."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Alex, eso es un avance, muy bien, estoy orgullosa de ti."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Mientras sea hablar de cosas lindas y maravillosas, por mi está bien."
+    }],
+    "name": "Gema",
+    "magnitude": 20.7,
+    "lang": "es"
+}, {
+    "score": 0.0,
+    "sentences": [{
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Bipolar."
+    }, {
+        "score": -0.6,
+        "magnitude": 0.6,
+        "content": "Max no tiene ni idea de hablar inglés."
+    }, {
+        "score": -0.4,
+        "magnitude": 0.4,
+        "content": "Estoy harto de Raúl y de github."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Me quiero morir."
+    }, {
+        "score": -0.5,
+        "magnitude": 0.5,
+        "content": "No he podido escribir nada de código en toda la mañana.."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "Soy feliz."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "Raúl, me gustaría hacerte una recomendación desinteresada e informal: no vuelvas a tocar git en tu vida."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Soy tan feliz ahora mismo que me arrancaría la cabeza."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Me gusta poder avanzar en los trabajos, pero no puedo, por lo que siento una enorme felicidad al imaginarme mi suicidio."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "Me voy a suicidar por lo maravillosa que es la vida."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "La alegría me embarga al pensar en los buenos amigos que tengo."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "Odio a mis compañeros de clase con toda mi alma."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "La amistad y la confianza son lo mejor de este mundo."
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "La naturaleza humana se basa en el odio y la traición."
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Max pierde el tiempo aqui en vez de ayudar en lo importante."
+    }, {
+        "score": -0.7,
+        "magnitude": 0.7,
+        "content": "Odio mi vida."
+    }, {
+        "score": -0.4,
+        "magnitude": 0.4,
+        "content": "Como me gustaría cortarle el cuello lentamente al puto subnormal de mi vecino e ir bebiendome su sangre mientras le degollo."
+    }, {
+        "score": -0.2,
+        "magnitude": 0.2,
+        "content": "Pero primero le desfiguraría a hostias la cara de subnormal que tiene el puto payaso."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Quiero matar."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Por que los mensajes positivos se han convertido en misas."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Holaaaaa."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "Me gusta el color de las flores en primavera."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Me he levantado muy contento y lleno de energía hoy."
+    }],
+    "name": "Alejandro",
+    "magnitude": 10.9,
+    "lang": "es"
+}, {
+    "score": 0.0,
+    "sentences": [{
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "It's a great day, you want to stay and we're going for a walk in the park?."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "You guys are always available."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "That's cool."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Thanks for the compliment."
+    }, {
+        "score": 0.6,
+        "magnitude": 0.6,
+        "content": "so nice of you."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "I am currently working on the charts and data flow."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "I am happy that you are happy."
+    }, {
+        "score": -0.6,
+        "magnitude": 0.6,
+        "content": "I think you are not ok, I recommend you to go to the psychologist and think about what is worrying you and what is not."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Now that I am thinking, should I go too?"
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Sometime I wonder why people have these kind of problems."
+    }, {
+        "score": -0.6,
+        "magnitude": 0.6,
+        "content": "Life is not easy at all."
+    }, {
+        "score": 0.6,
+        "magnitude": 0.6,
+        "content": "Hahaha, so funny."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "I couple years ago I moved to Spain and in the last few years I have seen that political parties like Vox are raising popularity, so, Gema, what is your opinion about that?."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Well..."
+    }, {
+        "score": -0.2,
+        "magnitude": 0.2,
+        "content": "I don't think so...."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Right now?"
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "I don't have opinion on that."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "First I have to answer other questions about myself, why are we here?"
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "where are we going?"
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Too much questions for too little time."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Right now, Barajas is the majority in this group."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Shut up."
+    }, {
+        "score": -0.2,
+        "magnitude": 0.2,
+        "content": "I don't get it."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "We need more data, more messages, don't stop typing."
+    }, {
+        "score": -0.9,
+        "magnitude": 0.9,
+        "content": "This is really boring."
+    }, {
+        "score": -0.8,
+        "magnitude": 0.8,
+        "content": "I hate doing this all day."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Please help me."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "I will kill you maybe."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Seems that you are really positive."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Alberto, send the picture with the number of messages."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Ok, we need to reach 30 messages everyone."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "We need that for this afternoon."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "It is really simple, you idiot people."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "So drepessing talk to this guy."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Hahaha."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Hi."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Guys, listen to Gema."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "She is really smart and she knows what she is talking about."
+    }, {
+        "score": -0.5,
+        "magnitude": 0.5,
+        "content": "Life is too short to be frustrated and angry all the time."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Ey guys, be cool. .."
+    }, {
+        "score": -0.2,
+        "magnitude": 0.2,
+        "content": "Only one job...."
+    }],
+    "name": "Max",
+    "magnitude": 14.1,
+    "lang": "en"
+}, {
+    "score": -0.2,
+    "sentences": [{
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Alex te odio, eres idiota."
+    }, {
+        "score": -0.8,
+        "magnitude": 0.8,
+        "content": "No funciona el maldito git."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "Eso es porque eres idiota."
+    }, {
+        "score": -0.5,
+        "magnitude": 0.5,
+        "content": "Te quiero ver muerto."
+    }, {
+        "score": -0.7,
+        "magnitude": 0.7,
+        "content": "Mi opinión es que la vida es una mierda."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Y que tu eres un desgraciado."
+    }, {
+        "score": -0.4,
+        "magnitude": 0.4,
+        "content": "Max es un imbécil y además es de Barajas."
+    }, {
+        "score": -0.5,
+        "magnitude": 0.5,
+        "content": "Eso no me lo dices en mi barrio, cobarde."
+    }, {
+        "score": -0.9,
+        "magnitude": 0.9,
+        "content": "Es lo único interesante que tiene vuestro maldito pueblo porque el resto es una absoluta basura."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Cállate."
+    }, {
+        "score": -0.7,
+        "magnitude": 0.7,
+        "content": "Te doy 2 opciones: Acaba con mi vida o cierra la boca."
+    }, {
+        "score": -0.8,
+        "magnitude": 0.8,
+        "content": "Me voy a cagar en vuestros muertos."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Me quiero morir."
+    }, {
+        "score": -0.9,
+        "magnitude": 0.9,
+        "content": "Este grupo es una basura y no sirve para nada."
+    }, {
+        "score": -0.2,
+        "magnitude": 0.2,
+        "content": "Hostias paco mahruenda tiene el mismo notebook que max."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "La única ventaja de que llegue un nuevo día es que ya faltan menos para que se acabe mi vida."
+    }, {
+        "score": -0.5,
+        "magnitude": 0.5,
+        "content": "Yo también odio tu vida, eres un fracasado."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Cerrad la boca todos que sois pesadisimos."
+    }, {
+        "score": -0.2,
+        "magnitude": 0.2,
+        "content": "No se que hago en este grupo si solo decís tonterías."
+    }, {
+        "score": -0.4,
+        "magnitude": 0.4,
+        "content": "Yo os trato así de mal porque es lo que se merecen unos oligofrénicos como vosotros."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Cierra la boca."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Gema cállate que me da igual lo que digas."
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Para decir tonterías mejor no lo digas."
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Dejadme en paz."
+    }, {
+        "score": 0.9,
+        "magnitude": 0.9,
+        "content": "Gema que dejes de contarme patrañas que pareces un cura hostia."
+    }, {
+        "score": -0.8,
+        "magnitude": 0.8,
+        "content": "Tu de que te ries jodida escoria, que eres más tonto y no naces.."
+    }, {
+        "score": -0.1,
+        "magnitude": 0.1,
+        "content": "Pero tu no se suponía que tenías que ser bipipolar, idiota."
+    }, {
+        "score": -0.4,
+        "magnitude": 0.4,
+        "content": "Estas todo el rato deprimido, que a ver lo entiendo porque no eres más que un perdedor y un maldito fracasado."
+    }, {
+        "score": -0.4,
+        "magnitude": 0.4,
+        "content": "Pero a ver subnormal que se supone que este chat tiene que ser libre de insultos."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "No digas tantas barrabasadas."
+    }, {
+        "score": -0.8,
+        "magnitude": 0.8,
+        "content": "Así me gusta subnormal."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Pues aplícate el cuento y no hables más por favor."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Morid ya joder."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Así me gusta esclavo."
+    }],
+    "name": "Raúl",
+    "magnitude": 16.1,
+    "lang": "es"
+}, {
+    "score": 0.3,
+    "sentences": [{
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "pasivo."
+    }, {
+        "score": 0.1,
+        "magnitude": 0.1,
+        "content": "Vale."
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Yo no tengo nada que hacer así que si queréis sí."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Pues yo estoy trabajando y no me puedo quejar de nada."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Todo depende del punto de vista."
+    }, {
+        "score": 0.3,
+        "magnitude": 0.3,
+        "content": "Tiene sus cosas buenas y sus cosas malas."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Y cual es tú opinión?."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Lo podemos hablar en el barrio que quieras, pero en barajas se está bien."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "En el mio hay un aeropuerto y con eso es suficiente."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "Me parece correcto."
+    }, {
+        "score": -0.7,
+        "magnitude": 0.7,
+        "content": "Yo creo que pensáis demasiado."
+    }, {
+        "score": -0.3,
+        "magnitude": 0.3,
+        "content": "Lo se joder."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Es que parece una conversación entre robots."
+    }, {
+        "score": 0.0,
+        "magnitude": 0.0,
+        "content": "Qué tal vuestra mañana?"
+    }, {
+        "score": 0.2,
+        "magnitude": 0.2,
+        "content": "Contadme algo que estáis muy callados."
+    }, {
+        "score": 0.7,
+        "magnitude": 0.7,
+        "content": "Todo bastante igualado y equilibrado, como tiene que ser."
+    }, {
+        "score": 0.6,
+        "magnitude": 0.6,
+        "content": "A veces tienes que soltar lo que llevas dentro y dejar los sentimientos fluir."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "Otras es mejor callarse la boca."
+    }, {
+        "score": 0.5,
+        "magnitude": 0.5,
+        "content": "Madre mia que agresivo, más calma."
+    }, {
+        "score": 0.6,
+        "magnitude": 0.6,
+        "content": "Lo que podemos hacer es quedar si os viene bien y hablarlo en persona."
+    }, {
+        "score": 0.8,
+        "magnitude": 0.8,
+        "content": "Podemos hacer todo lo que os apetezca."
+    }, {
+        "score": 0.4,
+        "magnitude": 0.4,
+        "content": "En cuanto tenga el movil a mano intento acordarme de mirarlo."
+    }],
+    "name": "Alberto",
+    "magnitude": 10.2,
+    "lang": "es"
+}]
