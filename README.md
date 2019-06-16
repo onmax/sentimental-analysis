@@ -1,19 +1,19 @@
 # Sentimental analysis in sentences
 
-The main goal of this assigment is to analyze sentiment in sentences. For this purpose we had use the following technologies:
+The main goal of this assigment is to analyze sentiment in sentences. For this purpose, we had use the following technologies:
 
 - JADE (Java)
 - Google Cloud
 - Node
 - Google Charts
 
-The use of JADE is to provide 3 different agents. In this image you can see how agents are related:
+We use JADE in order to provide 3 different agents. In this image you can see how agents are related:
 
 ![Agents](docs/agents.jpg)
 
 ## Agents
 
-In the next paragraphs will be explain how the data flows between agents. It is not included how agents behaviour works.
+In the next paragraphs, it will be explained how the data flows between agents. It is not included how agents behaviour works.
 
 All the agents are defined in package named agents.
 
@@ -34,7 +34,7 @@ The agent will parse that data to a HashMap<String, String>, where the key will 
 
 This agent will receive the data from agent 1. It will use API calls to the Google Cloud API to analyze the data and retrieve the results.
 
-The results will be converted to an ArrayList<Person>. The class Person is defined in package named agents. Person has an attribute call List<Sentence>. The documentation of that class can be found [here](https://cloud.google.com/natural-language/docs/reference/rest/v1/Sentence?hl=es)
+The results will be converted to an ArrayList<Person>. The class Person is defined in package named agents. Person has an attribute called sentences of type List<Sentence>. The documentation of that class can be found [here](https://cloud.google.com/natural-language/docs/reference/rest/v1/Sentence?hl=es)
 
 #### Agent 3
 
