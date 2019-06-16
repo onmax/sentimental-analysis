@@ -11,7 +11,6 @@ function drawPeopleSentiments() {
 		matrix.push(new Array(peopleData.length * 2))
 	}
 	matrix[0][0] = "Time"
-
 	for (let i = 2; i <= matrix[0].length; i += 2) {
 		matrix[0][i] = {
 			type: 'string',
@@ -23,11 +22,19 @@ function drawPeopleSentiments() {
 	}
 	peopleData.map((person, i) => {
 		matrix[0][i * 2 + 1] = person.name
-		person.sentences.map((s, j) => {
-			matrix[j + 1][0] = j + 1
-			matrix[j + 1][i * 2 + 1] = s.score
-			matrix[j + 1][i * 2 + 2] = `<div class="tooltip"><b>Score: </b> ${s.score} <br><b>Magnitude:</b> ${s.magnitude} <br><b>Content:</b> ${s.content}</div>`
-		})
+		person.sentences.map((s, j) => {})
+		for (let j = 0; j < maxLength; j++) {
+			let s = person.sentences[j]
+			if (s !== undefined) {
+				matrix[j + 1][0] = j + 1
+				matrix[j + 1][i * 2 + 1] = s.score
+				matrix[j + 1][i * 2 + 2] = `<div class="tooltip"><b>Score: </b> ${s.score} <br><b>Magnitude:</b> ${s.magnitude} <br><b>Content:</b> ${s.content}</div>`
+			} else {
+				matrix[j + 1][0] = j + 1
+				matrix[j + 1][i * 2 + 1] = null
+				matrix[j + 1][i * 2 + 2] = ""
+			}
+		}
 	})
 	console.log(matrix)
 

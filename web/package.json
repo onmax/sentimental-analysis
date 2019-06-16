@@ -1,0 +1,26 @@
+{
+<<<<<<< HEAD
+  "name": "web",
+  "version": "1.0.0",
+  "description": "web",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Maximum Joseph",
+=======
+  "name": "server",
+  "version": "1.0.0",
+  "description": "a",
+  "main": "languages-chart.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+>>>>>>> 132c43565b7959b98f0025f644083d2dc0ce45c7
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

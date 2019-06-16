@@ -61,7 +61,7 @@ public class Agent1 extends Agent {
 			System.out.println("Agent1: Error al establecer el contenido");
 		}
 		send(request);
-		System.out.println("Agente1: Mensaje enviado");
+		System.out.println("Agent1: Mensaje enviado");
 	}
 
 	public AID getAddress (String serviceType){
