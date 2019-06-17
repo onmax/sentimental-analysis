@@ -58,7 +58,8 @@ function drawPeopleSentiments() {
 		colors: colors,
 		legend: {
 			position: 'right'
-		}
+		},
+		curveType: 'function',
 	};
 
 	const chart = new google.visualization.LineChart(
