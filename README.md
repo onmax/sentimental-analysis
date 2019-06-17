@@ -70,3 +70,10 @@ The tables and charts in the web are the following:
 3. Relation between score and magnitude
 4. Comparation between subjects: its general score, magnitude and number of messages
 5. Tables with all the information for every sentence. It can by sort by any key, just clicking on the top of the table.
+
+
+## Authors
+* [Gema María González Jurado](https://github.com/gemawari)
+* [Alejandro Senovilla Tejedor](https://github.com/Alexsente)
+* [Raúl Cargaboja González](https://github.com/rcarbajsa)
+* [Máximo García Martinez](https://github.com/onmax)
