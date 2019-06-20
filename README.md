@@ -1,6 +1,6 @@
 # Sentimental analysis in sentences
 
-The main goal of this assigment is to analyze sentiment in sentences. For this purpose, we had use the following technologies:
+The main goal of this assigment is to analyze sentiment in sentences. For this purpose, we have used the following technologies:
 
 - JADE (Java)
 - Google Cloud
